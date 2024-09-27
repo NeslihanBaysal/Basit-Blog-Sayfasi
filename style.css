@@ -41,13 +41,14 @@ header h1 {
     font-weight: bold;
     margin-top: 5%;
     margin-bottom: 2%;
+    color: red;
 }
 .about-me p{
     color: #667085;
     margin-bottom: 2%;
     font-size: 16px;
 }
-h3{
+.skills h3{
     font-weight: bold;
     font-size: 23px;
     margin-bottom: 2%;

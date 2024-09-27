@@ -43,6 +43,9 @@ header h1 {
     margin-bottom: 2%;
     color: red;
 }
+.tiklama{
+    text-decoration: none;
+}
 .about-me p{
     color: #667085;
     margin-bottom: 2%;

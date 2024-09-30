@@ -3,19 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     padding: 20px 5%;
     background-color: white;
 }
-
 header {
     text-align: center;
     margin-bottom: 40px;
 }
-
 header p {
     font-size: 20px;
     color: black;
@@ -27,92 +24,41 @@ header h1 {
     font-weight: bold;
     letter-spacing: -2px;
     white-space: nowrap;
-    color: rgb(202, 81, 174);
     border-top: 1px solid #667085;
     border-bottom: 1px solid #667085;
 }
-
-.ust-kisim {
-    display: flex;
-    flex-direction: row;
-    gap: 2%;
-}
-
-.first-box {
-    width: 49%;
-    height: 480px;
-}
-
-.first-box img {
+.post{
     width: 100%;
-    height: 70%;
-    object-fit: cover; 
+    height: 400px;
+    overflow: hidden;
 }
-
-.second-box {
-    width: 49%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.image-container {
-    display: flex;
-    gap: 13px;
-    align-items: center;
-}
-.second-box > div img {
-    width: 50%;
+.post img{
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.bilgi {
-    width: 48%;
-    height: 100%;
-    display: flex;
+.about-me h2{  
     font-weight: bold;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    color: red;
 }
-.bk{
-    font-size: 16px;
-    color: rgb(99, 67, 191);
-    font-weight: bold;
-    margin-bottom: 10px;
+.tiklama{
+    text-decoration: none;
 }
-.bilgi-kutusu > h3{
-    font-size: 20px;
-    color: black;
-}
-p{
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: lighter;
+.about-me p{
     color: #667085;
-    margin-bottom: 35px;
+    margin-bottom: 2%;
+    font-size: 16px;
 }
-h2{
-    margin-top: 50px;
-    margin-bottom: 30px;
+.skills h3{
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: 2%;
 }
-
-.satir {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.post {
-    width: 32%;
-    display: flex;
-    flex-direction: column; 
-}
-
-.post img {
-    width: 100%;
-    height: auto;
-}
-
-.post-bilgi {
-    padding: 10px;
+.article{
+    margin-left: 2%;
+    color: #667085;
 }
 /* media */
 @media (max-width: 1200px) {
@@ -123,32 +69,6 @@ h2{
 @media (max-width: 992px) {
     header h1 {
         font-size: 150px;
-    }
-    .ust-kisim {
-        flex-direction: column;
-    }
-    .first-box, .second-box {
-        width: 100%;
-        height: auto;
-    }
-    .image-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    .second-box > div img {
-        width: 100%;
-        height: auto; 
-    }
-    .bilgi {
-        width: 100%;
-    }
-    .satir {
-        flex-direction: column;
-    }
-    .post {
-        width: 100%;
-        margin-bottom: 20px; 
     }
 }
 @media (max-width: 768px) {

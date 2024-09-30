@@ -45,17 +45,18 @@
     </section>
     <section class="alt-kisim">
         <h2>All blog posts</h2>
-        <div class="alt-kisim">
-            <div class="satir">
-                <div class="post">
+        <div class="slider-container">
+            <button id="prevBtn" class="slider-btn">←</button>
+            <div class="post-wrapper"> <!-- Tüm postlar bu wrapper içinde olacak -->
+                <div class="post" data-post-id="1">
                     <img src="img/the-blog-4.jpeg">
                     <div class="post-bilgi">
                         <p class="bk">Alec Whitten • 1 Jan 2023</p>
-                        <h3>Bill Walsh leadership lessons</h3>
+                        <a href="the-blog.html" class="tiklama"><h3>Bill Walsh leadership lessons</h3></a>
                         <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
                     </div>
                 </div>
-                <div class="post">
+                <div class="post" data-post-id="2">
                     <img src="img/the-blog-5.jpeg">
                     <div class="post-bilgi">
                         <p class="bk">Demi Wilkinson • 1 Jan 2023</p>
@@ -63,7 +64,7 @@
                         <p>Mental models are simple expressions of complex processes or relationships.</p>
                     </div>
                 </div>
-                <div class="post">
+                <div class="post" data-post-id="3">
                     <img src="img/the-blog-6.jpeg">
                     <div class="post-bilgi">
                         <p class="bk">Candice Wu • 1 Jan 2023</p>
@@ -71,9 +72,7 @@
                         <p>Introduction to Wireframing and its Principles. Learn from the best in the industry.</p>
                     </div>
                 </div>
-            </div>
-            <div class="satir">
-                <div class="post">
+                <div class="post" data-post-id="4">
                     <img src="img/the-blog-7.jpeg">
                     <div class="post-bilgi">
                         <p class="bk">Natali Craig • 1 Jan 2023</p>
@@ -81,7 +80,7 @@
                         <p>Collaboration can make our teams stronger, and our individual designs better.</p>
                     </div>
                 </div>
-                <div class="post">
+                <div class="post" data-post-id="5">
                     <img src="img/the-blog-8.jpeg">
                     <div class="post-bilgi">
                         <p class="bk">Drew Cano • 1 Jan 2023</p>
@@ -89,7 +88,7 @@
                         <p>JavaScript frameworks make development easy with extensive features and functionalities.</p>
                     </div>
                 </div>
-                <div class="post">
+                <div class="post" data-post-id="6">
                     <img src="img/the-blog-9.jpeg">
                     <div class="post-bilgi">
                         <p class="bk">Orlando Diggs • 1 Jan 2023</p>
@@ -98,7 +97,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <button id="nextBtn" class="slider-btn">→</button>
+        </div>         
     </section>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-const postContainer = document.querySelector('.post-wrapper'); // Tüm postlar burada
+const postContainer = document.querySelector('.post-wrapper'); 
 const posts = document.querySelectorAll('.post'); // Tüm postları al
 
 // Sağ oka tıklanınca (Next)

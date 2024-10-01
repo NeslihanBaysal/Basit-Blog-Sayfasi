@@ -133,7 +133,32 @@ header h1 {
     color: #667085;
     font-size: 15px;
 }
+.like-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+.like-button {
+    background-color: transparent;
+    color: white; /* Başlangıçta beyaz kalp */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s;
+}
+
+.like-button.active {
+    color: #ff66b2; /* Aktif olduğunda pembe kalp */
+}
+
+.like-button:hover {
+    background-color: #ffedf0; /* Hover efekti */
+}
 /* media */
 @media (max-width: 1200px) {
     header h1 {

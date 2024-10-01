@@ -81,3 +81,19 @@ document.getElementById('toggle-comments').addEventListener('click', function() 
         commentsSection.style.display = 'none'; // Yorumlar bölümünü gizle
     }
 });
+// Yazılara beğeni butonu eklemek için
+document.querySelectorAll('.like-button').forEach(function(button) {
+    button.addEventListener('click', function() {
+        const likeCountSpan = this.querySelector('.like-count'); // Butonun içindeki sayaç
+        let likeCount = parseInt(likeCountSpan.textContent);
+        
+        // Beğeni sayısını her tıklamada artır
+        likeCount++;
+        likeCountSpan.textContent = likeCount;
+
+        // Eğer buton aktif değilse, kalp rengini değiştir
+        if (!this.classList.contains('active')) {
+            this.classList.add('active'); // Kalbin rengini kırmızı yap
+        }
+    });
+});

@@ -1,18 +1,18 @@
 const postContainer = document.querySelector('.post-wrapper'); 
-const posts = document.querySelectorAll('.post'); // Tüm postları al
+const posts = document.querySelectorAll('.post');
 const tags = document.querySelectorAll('.tag');
 const clearFilterBtn = document.getElementById('clearFilterBtn');
 
-// Sağ oka tıklanınca (Next)
+// Sağ ok
 document.getElementById('prevBtn').addEventListener('click', () => {
     const firstPost = postContainer.firstElementChild; // İlk post'u al
     postContainer.appendChild(firstPost); // İlk post'u sona taşı
 });
 
-// Sol oka tıklanınca (Previous)
+// Sol ok
 document.getElementById('nextBtn').addEventListener('click', () => {
-    const lastPost = postContainer.lastElementChild; // Son post'u al
-    postContainer.insertBefore(lastPost, postContainer.firstElementChild); // Son post'u başa taşı
+    const lastPost = postContainer.lastElementChild; // Son postu al
+    postContainer.insertBefore(lastPost, postContainer.firstElementChild); // Son postu başa taşı
 });
 tags.forEach(tag => {
     tag.addEventListener('click', (event) => {

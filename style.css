@@ -155,10 +155,6 @@ h3{
 .slider-btn:hover {
     background-color: #ff3385;
 }
-x.tags {
-    margin-top: 10px;
-}
-
 .tag {
     display: inline-block;
     background-color: #f0f0f0;
@@ -169,10 +165,13 @@ x.tags {
     cursor: pointer;
     font-size: 14px;
 }
-
 .tag:hover {
     background-color: #ff66b2;
     color: white;
+}
+.tags-button{
+    margin-left: 15px;
+    margin-bottom: 15px;
 }
 .clear-filter-btn {
     display: inline-block;
@@ -186,11 +185,6 @@ x.tags {
     cursor: pointer;
     font-size: 14px;
 }
-
-.clear-filter-btn:hover {
-    background-color: #ff3385;
-}
-
 /* media */
 @media (max-width: 1200px) {
     header h1 {

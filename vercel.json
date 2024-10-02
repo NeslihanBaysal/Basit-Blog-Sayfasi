@@ -1,4 +1,14 @@
 {
+  "builds": [
+    {
+      "src": "the-blog/index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "the-blog/the-blog.html",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
     {
       "src": "/",

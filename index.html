@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Blog</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog-project/src/css/style.css">
 </head>
 <body>
     <header class="header">
@@ -13,7 +13,7 @@
     </header>
     <section class="ust-kisim">
         <div class="first-box">
-            <img src="img/the-blog-1.jpeg">
+            <img src="blog-project/src/img/the-blog-1.jpeg">
             <div>
                 <p class="bk">Olivia Rhye • 1 Jan 2023</p>
                 <h3>UX review presentations</h3>
@@ -22,7 +22,7 @@
         </div>
         <div class="second-box">
             <div class="image-container">
-                <img src="img/the-blog-2.jpeg">
+                <img src="blog-project/src/img/the-blog-2.jpeg">
                 <div class="bilgi">
                     <div class="bilgi-kutusu">
                         <p class="bk">Phoenix Baker • 1 Jan 2023</p>
@@ -32,7 +32,7 @@
                 </div> 
             </div>
             <div class="image-container">
-                <img src="img/the-blog-3.jpeg">
+                <img src="blog-project/src/img/the-blog-3.jpeg">
                 <div class="bilgi">
                     <div class="bilgi-kutusu">
                         <p class="bk">Lana Steiner • 1 Jan 2023</p>
@@ -61,9 +61,9 @@
         </div>
         <div class="slider-container">
             <button id="prevBtn" class="slider-btn">←</button>
-            <div class="post-wrapper"> <!-- Tüm postlar bu wrapper içinde olacak -->
+            <div class="post-wrapper">
                 <div class="post" data-post-id="1" data-tags="leadership,teamwork,sports">
-                    <img src="img/the-blog-4.jpeg">
+                    <img src="blog-project/src/img/the-blog-4.jpeg">
                     <div class="post-bilgi">
                         <p class="bk">Alec Whitten • 1 Jan 2023</p>
                         <a href="the-blog.html" class="tiklama"><h3>Bill Walsh leadership lessons</h3></a>
@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <div class="post" data-post-id="2" data-tags="productivity,software">
-                    <img src="img/the-blog-5.jpeg">
+                    <img src="blog-project/src/img/the-blog-5.jpeg">
                     <div class="post-bilgi">
                         <p class="bk">Demi Wilkinson • 1 Jan 2023</p>
                         <h3>PM mental models</h3>
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="post" data-post-id="3" data-tags="design,ux">
-                    <img src="img/the-blog-6.jpeg">
+                    <img src="blog-project/src/img/the-blog-6.jpeg">
                     <div class="post-bilgi">
                         <p class="bk">Candice Wu • 1 Jan 2023</p>
                         <h3>What is Wireframing?</h3>
@@ -100,7 +100,7 @@
                     </div>
                 </div>
                 <div class="post" data-post-id="4" data-tags="design,collaboration">
-                    <img src="img/the-blog-7.jpeg">
+                    <img src="blog-project/src/img/the-blog-7.jpeg">
                     <div class="post-bilgi">
                         <p class="bk">Natali Craig • 1 Jan 2023</p>
                         <h3>How collaboration makes us better designers</h3>
@@ -112,7 +112,7 @@
                     </div>
                 </div>
                 <div class="post" data-post-id="5" data-tags="javascript,software">
-                    <img src="img/the-blog-8.jpeg">
+                    <img src="blog-project/src/img/the-blog-8.jpeg">
                     <div class="post-bilgi">
                         <p class="bk">Drew Cano • 1 Jan 2023</p>
                         <h3>Our top 10 Javascript frameworks to use</h3>
@@ -124,7 +124,7 @@
                     </div>
                 </div>
                 <div class="post" data-post-id="6" data-tags="podcast,cx,software">
-                    <img src="img/the-blog-9.jpeg">
+                    <img src="blog-project/src/img/the-blog-9.jpeg">
                     <div class="post-bilgi">
                         <p class="bk">Orlando Diggs • 1 Jan 2023</p>
                         <h3>Podcast: Creating a better CX Community</h3>
@@ -140,6 +140,14 @@
             <button id="nextBtn" class="slider-btn">→</button>
         </div>
     </section>
-    <script src="main.js"></script>
+    <button id="toggle-comments">Yorumlar</button>
+    <div id="comments-section" style="display: none;">
+        <div id="yorumlar-1"></div>
+        <form class="yorumlar" onsubmit="return handleSubmit(event, 1)">
+            <textarea placeholder="Yorumunuzu yazın..." required></textarea>
+            <button type="submit">Gönder</button>
+        </form>
+    </div>
+    <script src="./blog-project/dist/bundle.js"></script>
 </body>
 </html>

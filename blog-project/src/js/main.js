@@ -1,33 +1,28 @@
 const postContainer = document.querySelector('.post-wrapper'); 
-const posts = document.querySelectorAll('.post');
+const posts = document.querySelectorAll('.post'); // Tüm postları al
 const tags = document.querySelectorAll('.tag');
 const clearFilterBtn = document.getElementById('clearFilterBtn');
+import './the-blog.js';
 
 // Sağ ok
 document.getElementById('prevBtn').addEventListener('click', () => {
-    const firstPost = postContainer.firstElementChild; // İlk post'u al
-    postContainer.appendChild(firstPost); // İlk post'u sona taşı
+    const firstPost = postContainer.firstElementChild;
+    postContainer.appendChild(firstPost); 
 });
 
 // Sol ok
 document.getElementById('nextBtn').addEventListener('click', () => {
-    const lastPost = postContainer.lastElementChild; // Son postu al
-    postContainer.insertBefore(lastPost, postContainer.firstElementChild); // Son postu başa taşı
+    const lastPost = postContainer.lastElementChild; 
+    postContainer.insertBefore(lastPost, postContainer.firstElementChild); 
 });
 tags.forEach(tag => {
     tag.addEventListener('click', (event) => {
         const selectedTag = event.target.getAttribute('data-tag');
-        
-        // Tüm yazıları tekrar görünür yap (önce hepsini gösterip sonra filtre yapacağız)
         posts.forEach(post => {
-            post.style.display = 'block'; // Önce hepsini göster
+            post.style.display = 'block'; 
         });
-
-        // Tüm yazıları kontrol et ve tıklanan etiketle eşleşmeyenleri gizle
         posts.forEach(post => {
             const postTags = post.getAttribute('data-tags').split(',');
-            
-            // Eğer yazının etiketleri içinde tıklanan etiket yoksa gizle
             if (!postTags.includes(selectedTag)) {
                 post.style.display = 'none';
             }
@@ -36,6 +31,6 @@ tags.forEach(tag => {
 });
 clearFilterBtn.addEventListener('click', () => {
     posts.forEach(post => {
-        post.style.display = 'block'; // Tüm yazıları görünür yap
+        post.style.display = 'block'; 
     });
 });

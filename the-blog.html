@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link rel="stylesheet" href="the-blog.css">
+    <link rel="stylesheet" href="blog-project/src/css/the-blog.css">
 </head>
 <body>
     <header class="header">
@@ -12,7 +12,7 @@
         <h1>THE BLOG</h1>     
     </header>
     <div class="post" data-post-id="1">
-        <img src="img/blog adam-foto.jpeg">
+        <img src="blog-project/src/img/blog adam-foto.jpeg">
     </div>
     <div class="like-container"></div>
     <button class="like-button">❤️<span class="like-count">0</span></button>
@@ -42,10 +42,10 @@
     <div id="comments-section" style="display: none;">
         <div id="yorumlar-1"></div>
         <form class="yorumlar" onsubmit="return handleSubmit(event, 1)">
-            <textarea placeholder="Yorumunuzu yazın..." required></textarea>
+        <textarea placeholder="Yorumunuzu yazın..." required></textarea>
             <button type="submit">Gönder</button>
         </form>
     </div>
-    <script src="the-blog.js"></script>
+    <script src="./blog-project/dist/bundle.js"></script>
 </body>
 </html>

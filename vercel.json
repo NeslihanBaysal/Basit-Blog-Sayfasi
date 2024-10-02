@@ -1,26 +1,4 @@
 {
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "the-blog.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "blog-project/src/css/(.*)",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "blog-project/src/img/(.*)",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "blog-project/dist/(.*)",
-      "use": "@vercel/static"
-    }
-  ],
   "routes": [
     {
       "src": "/",

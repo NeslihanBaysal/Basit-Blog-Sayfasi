@@ -23,8 +23,12 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/",
       "dest": "/index.html"
+    },
+    {
+      "src": "/the-blog",
+      "dest": "/the-blog.html"
     }
   ]
 }

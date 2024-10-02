@@ -9,15 +9,15 @@
       "use": "@vercel/static"
     },
     {
-      "src": "src/css/(.*)",
+      "src": "blog-project/src/css/(.*)",
       "use": "@vercel/static"
     },
     {
-      "src": "src/img/(.*)",
+      "src": "blog-project/src/img/(.*)",
       "use": "@vercel/static"
     },
     {
-      "src": "dist/(.*)",
+      "src": "blog-project/dist/(.*)",
       "use": "@vercel/static"
     }
   ],
@@ -29,6 +29,18 @@
     {
       "src": "/the-blog",
       "dest": "/the-blog.html"
+    },
+    {
+      "src": "/blog-project/src/css/(.*)",
+      "dest": "/blog-project/src/css/$1"
+    },
+    {
+      "src": "/blog-project/src/img/(.*)",
+      "dest": "/blog-project/src/img/$1"
+    },
+    {
+      "src": "/blog-project/dist/(.*)",
+      "dest": "/blog-project/dist/$1"
     }
   ]
 }

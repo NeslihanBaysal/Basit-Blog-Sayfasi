@@ -2,7 +2,7 @@
   "name": "basit-blog-sayfasi",
   "version": "1.0.0",
   "description": "Basit Blog Sayfasi Olusturma",
-  "main": "script.js",
+  "main": "blog-project/dist/bundle.js",
   "type": "module",
   "scripts": {
     "build": "rollup -c",

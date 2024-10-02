@@ -5,7 +5,7 @@ import babel from '@rollup/plugin-babel';
 export default {
     input: 'blog-project/src/js/main.js',  
     output: {
-        file: 'dist/bundle.js', 
+        file: 'blog-project/dist/bundle.js', 
         format: 'iife',  
         name: 'BlogBundle'  
     },

@@ -20,5 +20,6 @@
       "src": "/blog-project/dist/(.*)",
       "dest": "/blog-project/dist/$1"
     }
-  ]
+  ],
+  "outputDirectory": "the-blog"
 }

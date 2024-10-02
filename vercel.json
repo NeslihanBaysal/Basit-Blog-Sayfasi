@@ -9,17 +9,16 @@
       "dest": "/the-blog.html"
     },
     {
-      "src": "/blog-project/src/css/(.*)",
-      "dest": "/blog-project/src/css/$1"
+      "src": "/src/css/(.*)",
+      "dest": "/src/css/$1"
     },
     {
-      "src": "/blog-project/src/img/(.*)",
-      "dest": "/blog-project/src/img/$1"
+      "src": "/src/img/(.*)",
+      "dest": "/src/img/$1"
     },
     {
-      "src": "/blog-project/dist/(.*)",
-      "dest": "/blog-project/dist/$1"
+      "src": "/dist/(.*)",
+      "dest": "/dist/$1"
     }
-  ],
-  "outputDirectory": "blog-project"
+  ]
 }

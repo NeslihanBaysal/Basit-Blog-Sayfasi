@@ -1,14 +1,30 @@
 {
-    "builds": [
-      {
-        "src": "index.html",
-        "use": "@vercel/static"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/index.html"
-      }
-    ]
-  }
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "the-blog.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "src/css/(.*)",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "src/img/(.*)",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "dist/(.*)",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}

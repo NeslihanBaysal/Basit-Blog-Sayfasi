@@ -1,45 +1,23 @@
 {
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "the-blog.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "blog-project/src/css/(.*)",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "blog-project/src/img/(.*)",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "blog-project/dist/(.*)",
-      "use": "@vercel/static"
-    }
-  ],
   "routes": [
     {
       "src": "/",
-      "dest": "/index.html"
+      "dest": "/blog-project/index.html"
     },
     {
       "src": "/the-blog",
-      "dest": "/the-blog.html"
+      "dest": "/blog-project/the-blog.html"
     },
     {
-      "src": "/blog-project/src/css/(.*)",
+      "src": "/src/css/(.*)",
       "dest": "/blog-project/src/css/$1"
     },
     {
-      "src": "/blog-project/src/img/(.*)",
+      "src": "/src/img/(.*)",
       "dest": "/blog-project/src/img/$1"
     },
     {
-      "src": "/blog-project/dist/(.*)",
+      "src": "/dist/(.*)",
       "dest": "/blog-project/dist/$1"
     }
   ]

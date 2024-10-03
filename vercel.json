@@ -2,22 +2,22 @@
   "routes": [
     {
       "src": "/",
-      "dest": "/index.html"
+      "dest": "/blog-project/index.html"
     },
     {
       "src": "/the-blog",
-      "dest": "/the-blog.html"
+      "dest": "/blog-project/the-blog.html"
     },
     {
-      "src": "/blog-project/src/css/(.*)",
+      "src": "/src/css/(.*)",
       "dest": "/blog-project/src/css/$1"
     },
     {
-      "src": "/blog-project/src/img/(.*)",
+      "src": "/src/img/(.*)",
       "dest": "/blog-project/src/img/$1"
     },
     {
-      "src": "/blog-project/dist/(.*)",
+      "src": "/dist/(.*)",
       "dest": "/blog-project/dist/$1"
     }
   ]

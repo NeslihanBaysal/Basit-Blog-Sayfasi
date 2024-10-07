@@ -1,27 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link rel="stylesheet" href="./src/css/the-blog.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
 </head>
+
 <body>
     <header class="header">
         <p>BLOG</p>
-        <h1>THE BLOG</h1>     
+        <h1>THE BLOG</h1>
     </header>
     <div class="post" data-post-id="1">
-        <img src="./src/img/blog adam-foto.jpeg">
+        <img src="./img/blog adam-foto.jpeg">
     </div>
     <div class="like-container"></div>
     <button class="like-button">❤️<span class="like-count">0</span></button>
     </div>
     <div class="about-me">
         <h2>About Me</h2>
-        <p>As a passionate and experienced UI designer, I am dedicated to creating intuitive and engaging user experiences that meet the needs of my clients and their users. I have a strong understanding of design principles and a proficiency in design tools, and I am comfortable working with cross-functional teams to bring projects to fruition. I am confident in my ability to create designs that are both visually appealing and functional, and I am always looking for new challenges and opportunities to grow as a designer.</p>
+        <p>As a passionate and experienced UI designer, I am dedicated to creating intuitive and engaging user
+            experiences that meet the needs of my clients and their users. I have a strong understanding of design
+            principles and a proficiency in design tools, and I am comfortable working with cross-functional teams to
+            bring projects to fruition. I am confident in my ability to create designs that are both visually appealing
+            and functional, and I am always looking for new challenges and opportunities to grow as a designer.</p>
     </div>
-    
+
     <div class="skills">
         <h3>Skills:</h3>
         <ul class="article">
@@ -29,23 +36,25 @@
             <li>Proficiency in design tools such as Adobe Creative Suite and Sketch</li>
             <li>Excellent visual design skills, with a strong understanding of layout, color theory, and typography</li>
             <li>Ability to create wireframes and prototypes to communicate design concepts</li>
-            <li>Strong communication and collaboration skills, with the ability to work effectively with cross-functional teams</li>
+            <li>Strong communication and collaboration skills, with the ability to work effectively with
+                cross-functional teams</li>
             <li>Experience conducting user research and gathering insights to inform design decisions</li>
             <li>Proficiency in HTML, CSS, and JavaScript</li>
         </ul>
         <div class="like-container">
         </div>
-    
+
     </div>
     <button id="toggle-comments">Yorumlar</button>
 
     <div id="comments-section" style="display: none;">
         <div id="yorumlar-1"></div>
         <form class="yorumlar" onsubmit="return handleSubmit(event, 1)">
-        <textarea placeholder="Yorumunuzu yazın..." required></textarea>
+            <textarea placeholder="Yorumunuzu yazın..." required></textarea>
             <button type="submit">Gönder</button>
         </form>
     </div>
-    <script src="./dist/bundle.js"></script>
+    <script type="module" src="../vendor/index.js"></script>
 </body>
+
 </html>

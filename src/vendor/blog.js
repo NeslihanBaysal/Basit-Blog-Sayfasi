@@ -1,3 +1,5 @@
+import "../styles/style.css";
+
 function saveComment(postId, comment) {
     const comments = getComments(postId);
     comments.push(comment);
@@ -39,7 +41,7 @@ function renderComments(postId) {
     });
 }
 
-function handleSubmit(event, postId) {
+function handleSubmit(event) {
     event.preventDefault();
     const textarea = event.target.querySelector('textarea');
     const comment = textarea.value;
@@ -48,18 +50,21 @@ function handleSubmit(event, postId) {
         return false;
     }
 
-    saveComment(postId, comment);
-    renderComments(postId);
+    saveComment('1', comment);
+    renderComments('1');
 
     textarea.value = '';
     return false;
 }
 
 window.onload = function () {
+    console.log('', )
     document.querySelectorAll('.post').forEach(post => {
         const postId = post.getAttribute('data-post-id');
         renderComments(postId);
     });
+
+    document.getElementById('form').addEventListener('submit', handleSubmit);
 }
 
 document.getElementById('toggle-comments').addEventListener('click', function () {

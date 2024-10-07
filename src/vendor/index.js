@@ -1,4 +1,3 @@
-import * as Blog from "./blog"
 import '../styles/style.css'
 
 const postContainer = document.querySelector('.post-wrapper');
@@ -17,6 +16,7 @@ document.getElementById('nextBtn').addEventListener('click', () => {
     const lastPost = postContainer.lastElementChild;
     postContainer.insertBefore(lastPost, postContainer.firstElementChild);
 });
+
 tags.forEach(tag => {
     tag.addEventListener('click', (event) => {
         const selectedTag = event.target.getAttribute('data-tag');
@@ -31,6 +31,7 @@ tags.forEach(tag => {
         });
     });
 });
+
 clearFilterBtn.addEventListener('click', () => {
     posts.forEach(post => {
         post.style.display = 'block';

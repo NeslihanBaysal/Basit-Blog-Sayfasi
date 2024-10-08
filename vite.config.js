@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import { resolve } from "path"
 
 export default defineConfig({
     root: './src',
@@ -7,6 +8,12 @@ export default defineConfig({
         open: "./index.html"
     },
     build: {
-        outDir: "../dist"
+        outDir: "../dist",
+        rollupOptions: {
+            input: {
+                main: resolve(__dirname, "src/index.html"),
+                nested: resolve(__dirname,"src/pages/blog.html")
+            }
+        }
     },
 })

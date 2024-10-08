@@ -32,7 +32,7 @@ function renderComments(postId) {
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Sil';
         deleteBtn.onclick = function () {
-            deleteComment(postId, index); // Silme işlemi
+            deleteComment(postId, index);
         };
 
         commentWrapper.appendChild(p);

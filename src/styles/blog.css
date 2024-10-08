@@ -96,7 +96,7 @@ header h1 {
 }
 
 .like-button {
-    background-color: transparent;
+    background-color: rgb(230, 151, 193);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -110,11 +110,11 @@ header h1 {
 }
 
 .like-button.active {
-    color: #ff66b2;
+    color: white;
 }
 
 .like-button:hover {
-    background-color: #ffedf0;
+    background-color: rgb(225, 128, 180);
 }
 
 /* Media queries */

@@ -94,7 +94,6 @@ p {
 h2{
   margin-top: 50px;
   margin-bottom: 10px;
-  margin-left: 15px;
 }
 
 h3{
@@ -105,11 +104,6 @@ h3{
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.arrow-icon {
-  font-size: 16px;
-  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .tiklama {
@@ -123,7 +117,6 @@ h3{
   transform: translate(3px, -3px); 
   color: #ff66b2; 
 }
-
 .slider-container {
   display: flex;
   align-items: center;
@@ -134,17 +127,16 @@ h3{
 }
 
 .post-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 8px;
-  justify-content: center;
-  width: 98%;
-  margin: 0 auto;
+  justify-items: center;
+  margin-right: 2%;
+  width: 100%;
 }
 
 .post {
-  width: calc(33.333% - 8px);
-  flex: 1 1 30%;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -152,6 +144,7 @@ h3{
   width: 100%;
   height: auto;
 }
+
 .tag {
   display: inline-block;
   background-color: #f0f0f0;
@@ -162,26 +155,28 @@ h3{
   cursor: pointer;
   font-size: 14px;
 }
+
 .tag:hover {
   background-color: #ff66b2;
   color: white;
 }
-.tags-button{
-  margin-left: 15px;
+
+.tags-button {
   margin-bottom: 15px;
 }
+
 .clear-filter-btn {
   display: inline-block;
   background-color: #ff66b2;
   color: white;
   padding: 10px 20px;
   margin: 20px 0;
-  margin-left: 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
 }
+
 /* media */
 @media (max-width: 1200px) {
   header h1 {

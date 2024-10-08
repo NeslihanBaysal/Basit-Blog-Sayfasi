@@ -1,3 +1,5 @@
+import "../styles/style.css";
+
 function saveComment(postId, comment) {
     const comments = getComments(postId);
     comments.push(comment);
@@ -11,9 +13,9 @@ function getComments(postId) {
 
 function deleteComment(postId, index) {
     const comments = getComments(postId);
-    comments.splice(index, 1); 
-    localStorage.setItem('comments-' + postId, JSON.stringify(comments)); 
-    renderComments(postId); 
+    comments.splice(index, 1);
+    localStorage.setItem('comments-' + postId, JSON.stringify(comments));
+    renderComments(postId);
 }
 
 function renderComments(postId) {
@@ -26,10 +28,10 @@ function renderComments(postId) {
 
         const p = document.createElement('p');
         p.textContent = comment;
-        
+
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Sil';
-        deleteBtn.onclick = function() {
+        deleteBtn.onclick = function () {
             deleteComment(postId, index); // Silme işlemi
         };
 
@@ -39,7 +41,7 @@ function renderComments(postId) {
     });
 }
 
-function handleSubmit(event, postId) {
+function handleSubmit(event) {
     event.preventDefault();
     const textarea = event.target.querySelector('textarea');
     const comment = textarea.value;
@@ -48,40 +50,43 @@ function handleSubmit(event, postId) {
         return false;
     }
 
-    saveComment(postId, comment);
-    renderComments(postId);
+    saveComment('1', comment);
+    renderComments('1');
 
     textarea.value = '';
     return false;
 }
 
-window.onload = function() {
+window.onload = function () {
+    console.log('', )
     document.querySelectorAll('.post').forEach(post => {
         const postId = post.getAttribute('data-post-id');
-        renderComments(postId); 
+        renderComments(postId);
     });
+
+    document.getElementById('form').addEventListener('submit', handleSubmit);
 }
 
-document.getElementById('toggle-comments').addEventListener('click', function() {
+document.getElementById('toggle-comments').addEventListener('click', function () {
     const commentsSection = document.getElementById('comments-section');
     if (commentsSection.style.display === 'none') {
-        commentsSection.style.display = 'block'; 
-        renderComments(1); 
+        commentsSection.style.display = 'block';
+        renderComments(1);
     } else {
-        commentsSection.style.display = 'none'; 
+        commentsSection.style.display = 'none';
     }
 });
 
-document.querySelectorAll('.like-button').forEach(function(button) {
-    button.addEventListener('click', function() {
-        const likeCountSpan = this.querySelector('.like-count'); 
+document.querySelectorAll('.like-button').forEach(function (button) {
+    button.addEventListener('click', function () {
+        const likeCountSpan = this.querySelector('.like-count');
         let likeCount = parseInt(likeCountSpan.textContent);
-        
+
         likeCount++;
         likeCountSpan.textContent = likeCount;
 
         if (!this.classList.contains('active')) {
-            this.classList.add('active'); 
+            this.classList.add('active');
         }
     });
 });

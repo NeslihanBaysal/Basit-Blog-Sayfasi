@@ -5,18 +5,6 @@ const posts = document.querySelectorAll('.post');
 const tags = document.querySelectorAll('.tag');
 const clearFilterBtn = document.getElementById('clearFilterBtn');
 
-// Sağ ok
-document.getElementById('prevBtn').addEventListener('click', () => {
-    const firstPost = postContainer.firstElementChild;
-    postContainer.appendChild(firstPost);
-});
-
-// Sol ok
-document.getElementById('nextBtn').addEventListener('click', () => {
-    const lastPost = postContainer.lastElementChild;
-    postContainer.insertBefore(lastPost, postContainer.firstElementChild);
-});
-
 tags.forEach(tag => {
     tag.addEventListener('click', (event) => {
         const selectedTag = event.target.getAttribute('data-tag');

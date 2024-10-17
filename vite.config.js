@@ -1,19 +1,18 @@
-import { defineConfig } from 'vite'
-import { resolve } from "path"
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import { resolve } from 'path';
 
 export default defineConfig({
-    root: './src',
-    server: {
-        port: 3000,
-        open: "./index.html"
-    },
-    build: {
-        outDir: "../dist",
-        rollupOptions: {
-            input: {
-                main: resolve(__dirname, "src/index.html"),
-                nested: resolve(__dirname,"src/pages/blog.html")
-            }
-        }
-    },
-})
+  plugins: [vue()],
+  server: {
+    port: 3000, 
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'), 
+        blog: resolve(__dirname, 'src/blog.html')
+      }
+    }
+  }
+});
